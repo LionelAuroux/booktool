@@ -45,6 +45,7 @@ extensions = [
 #    'sphinx.ext.todo',
     'helloworld',
     'todo',
+    'booktool.twocolumns',
 ]
 ### used by todo extension
 todo_include_todos = True
@@ -125,7 +126,7 @@ latex_elements = {
 
     # Additional stuff for the LaTeX preamble.
     #
-    # 'preamble': '',
+    #'preamble': '\\usepackage{multicol}',
 
     # Latex figure (float) alignment
     #
