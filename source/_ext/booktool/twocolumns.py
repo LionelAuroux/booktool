@@ -20,7 +20,9 @@ class End2Cols(Directive):
         return [end_node]
 
 def add_preamble(app, config):
-    config.latex_elements['preamble'] = "\\usepackage{multicol}"
+    if 'preamble' not in config.latex_elements:
+        config.latex_elements['preamble'] = ""   
+    config.latex_elements['preamble'] += "\\usepackage{multicol}\n"
 
 def setup(app):
     app.add_directive("bk_begin2cols", Begin2Cols)
